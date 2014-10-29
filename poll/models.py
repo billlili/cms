@@ -8,6 +8,9 @@ class Question(models.Model):
         return self.question_text
     def was_published_recently(self):
         return self.pub_date>=timezone.now()-datetime.timedelta(days=1)
+    was_published_recently.admin_order_field='pub_date'
+    was_published_recently.boolean=True
+    was_published_recently.short_description='Published recently?'
     question_text=models.CharField(max_length=200)
     pub_date=models.DateTimeField('date published')
 
@@ -24,7 +27,7 @@ class Reporter(models.Model):
     def __unicode__(self):
         return self.full_name
 
-class Aticle(models.Model):
+class Article(models.Model):
     pub_date=models.DateField()
     headline=models.CharField(max_length=200)
     content=models.TextField()

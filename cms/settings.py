@@ -22,7 +22,7 @@ SECRET_KEY = '+ipaayi*494ycbx0un2yjl@gn=%b#tdhrnbwqrm$68w)r*&r-s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 TEMPLATE_DIRS=(
-    '/home/lihongjiao/cms/templates',
+    '/home/lihongjiao/first_web/templates/',
 )
 TEMPLATE_DEBUG = True
 

@@ -8,6 +8,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/index/$','blog.views.index'),
+    url(r'^poll/',include('poll.urls')),
     url(r'',include('django.contrib.flatpages.urls')),
-    url(r'^tiny_mce/(?P<path>.*)$','django.views.static.serve',{'document_root':'/home/lihongjiao/tinymce/'}),
 )
